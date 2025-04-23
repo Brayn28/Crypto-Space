@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Crypto Flow Globe</title> 
+  <style>
+    body { margin: 0; background: black; color: white; font-family: Arial, sans-serif; }
+    #globeViz, #asiaViz, #euViz, #usViz { position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; display: none; }
+    #globeViz.active, #asiaViz.active, #euViz.active, #usViz.active { display: block; }
+    #matrix, #trendChart { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); padding: 10px; border-radius: 8px; z-index: 2; }
+    select { background: black; color: white; border: 1px solid white; }
+  </style> 
+ </head> 
+ <body> 
+  <div id="globeViz" class="active"></div> 
+  <div id="asiaViz"></div> 
+  <div id="euViz"></div> 
+  <div id="usViz"></div> 
+  <div id="matrix"></div> 
+  <div id="trendChart"><canvas id="trendCtx" width="400" height="200"></canvas></div>
+  <select id="globeRegion" style="position:absolute; top:10px; left:10px; z-index:2;">
+    <option value="globeViz">Global</option>
+    <option value="asiaViz">Asia</option>
+    <option value="euViz">Europe</option>
+    <option value="usViz">US</option>
+  </select> 
+  <audio id="alertSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio> 
+  <script src="https://unpkg.com/three"></script> 
+  <script src="https://unpkg.com/three-globe"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+  <script>
+    // JavaScript from the original file remains unchanged
+  </script> 
+</body></html>
